@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body Styling */
+/* body {
+    font-family: Arial, sans-serif;
+    background: url('/image/back2.webp') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* Login Section Container */
+#y-login {
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* width: 1000px; */
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Main Container */
+#y-login-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurred effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 500px;
+    max-width: 90%; /* Responsive width */
+}
+
+/* Form Container */
+#y-login-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#y-login-form-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Input */
+.y-login-form-input {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Captcha Label */
+.y-login-form-label {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    width: fit-content;
+    text-align: center;
+}
+
+/* Checkbox and Text */
+.y-login-form-check {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.y-login-form-check p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Buttons */
+.y-login-submit-btn {
+    background-color: orangered;
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+    margin: 10px 0;
+}
+
+.y-login-submit-btn:hover {
+    transform: scale(1.05);
+    background-color: darkred;
+}
+
+.y-login-links-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.y-login-links-btn button {
+    padding: 10px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.y-login-links-btn button:hover {
+    transform: scale(1.05);
+    background-color: darkblue;
+}
+
+.y-login-links-btn button:active {
+    transform: scale(0.95);
+}
+
+/* Links */
+.y-login-links {
+    text-decoration: none;
+    font-size: 14px;
+    color: orangered;
+    
+}
+.div{
+    margin-bottom: 20px;
+}
+
+.y-login-links:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #y-login-main-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .y-login-form-input {
+        max-width: 100%;
+    }
+
+    .y-login-submit-btn {
+        max-width: 100%;
+    }
+
+    .y-login-links-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

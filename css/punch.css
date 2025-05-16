@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 10px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar nav ul li a.active {
+    text-decoration: underline;
+}
+
+.hero-section {
+    text-align: center;
+    background: #eef2f5;
+    padding: 50px 20px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    color: #1e3a5f;
+}
+
+.hero-section img.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.punctuality-details, .train-info, .real-time-tracking {
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.train-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.train-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.train-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.train-card h3 {
+    color: #1e3a5f;
+    margin: 10px 0;
+}
+
+.train-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.real-time-tracking .button {
+    display: inline-block;
+    background: #1e3a5f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.real-time-tracking .button:hover {
+    background: #14293f;
+}
+
+footer {
+    text-align: center;
+    background: #1e3a5f;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+}

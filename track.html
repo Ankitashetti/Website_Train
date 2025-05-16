@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TROCKONGO</title>
+    <link rel="stylesheet" href="css/track.css">
+    <link rel="icon" href="./images/titlepage logo.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://kit.fontawesome.com/0de0529c5f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="nav">
+    <img src="image/logo.webp" alt="logo" width="80px">
+    <div>
+        <button></button>
+        <button></button>
+    </div>
+   </div>
+    <div class="main-div">
+        <form action="#">
+            <div class="input">
+                <!-- From Station -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="17" viewBox="0 0 24 24">
+                    <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"></path>
+                </svg>
+                <input id="fromInput" type="text" name="From" placeholder="From">
+                
+                <!-- To Station -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="17" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path>
+                </svg>
+                <input id="toInput" type="text" name="To" placeholder="To">
+        
+                <!-- Date Input -->
+                <input id="dateInput" type="date" name="cal" class="cal">
+        
+                <!-- Class Selection -->
+                <select id="classSelect" onchange="updateAmount()">
+                  <option value="1">ALL CLASSES</option>
+                  <option value="2">LADIES</option>
+                  <option value="3">ANUBHUTI CLASS (EA)</option>
+                  <option value="4">AC FIRST CLASS (1A)</option>
+                  <option value="5">VISTADOME AC(1A)</option>
+                  <option value="6">EXEC. CHAIR CAR (EC)</option>
+                  <option value="7">AC 2 TIER (2A)</option>
+              </select>
+        
+                <!-- General Selection -->
+                <select id="generalSelect">
+                    <option value="1">GENERAL</option>
+                    <option value="2">LADIES</option>
+                    <option value="3">LOWER BERTH / SR. CITIZEN</option>
+                    <option value="4">PERSON WITH DISABILITY</option>
+                    <option value="5">DUTY PASS</option>
+                    <option value="6">TATKAL</option>
+                    <option value="7">PREMIUM TATKAL</option>
+                </select>
+        
+                <!-- Submit Button -->
+                <input type="submit" value="Modify Search" class="search">
+            </div>
+        
+            <!-- Checkbox Section -->
+            <div class="check">
+                <input id="disabilityCheckbox" type="checkbox">
+                <p>Person With Disability Concession</p>
+                
+                <input id="flexibleDateCheckbox" type="checkbox">
+                <p>Flexible With Date</p>
+        
+                <input id="availableBerthCheckbox" type="checkbox">
+                <p>Train With Available Berth</p>
+        
+                <input id="passConcessionCheckbox" type="checkbox">
+                <p>Railway Pass Concession</p>
+            </div>
+        
+        </form>
+      <div class="flex">
+        <section class="side-class">
+            <div class="detail">
+                <div>
+                    <h4>Refine Results</h4>
+                    <h4><span style="color: orangered;">Reset Filters</span></h4>
+                </div>
+                <div>
+                    <h4>JOURNEY CLASS</h4>
+                    <p id="journeyClassText"></p>
+                </div>
+                <div>
+                    <h4>TRAIN TYPE</h4>
+                    <p id="trainTypeText"></p>
+                </div>
+                <div>
+                  <h4>DEPARTURE TIME</h4>
+                  <div class="div">
+                      <ul>
+                          <li onclick="toggleList('hiddenList161', 'button161')" style="color: black;">
+                              Select All <span id="button161">▾</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <ul id="hiddenList161" class="hidden">
+                  <li>
+                      <button class="time-option" data-time-range="00:00 - 06:00">00:00 - 06:00 <br><span>Early Morning</span></button>
+                  </li>
+                  <li>
+                      <button class="time-option" data-time-range="06:00 - 12:00">06:00 - 12:00 <br><span>Morning</span></button>
+                  </li>
+                  <li>
+                      <button class="time-option" data-time-range="12:00 - 18:00">12:00 - 18:00 <br><span>Mid Day</span></button>
+                  </li>
+                  <li>
+                      <button class="time-option" data-time-range="18:00 - 24:00">18:00 - 24:00 <br><span>Night</span></button>
+                  </li>
+              </ul>
+              
+                <div>
+                    <h4>ARRIVAL TIME</h4>
+                    <div class="div">
+                        <ul>
+                            <li onclick="toggleList('hiddenList171', 'button171')" style="color: black;">Select All <span id="button16">▾</span></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <ul id="hiddenList171" class="hidden">
+                    <li>
+                        <button onclick="setArrivalTime('00:00 - 06:00')">00:00 - 06:00 <br><span>Early Morning</span></button>
+                    </li>
+                    <li>
+                        <button onclick="setArrivalTime('06:00 - 12:00')">06:00 - 12:00 <br><span>Morning</span></button>
+                    </li>
+                    <li>
+                        <button onclick="setArrivalTime('12:00 - 18:00')">12:00 - 18:00 <br><span>Mid Day</span></button>
+                    </li>
+                    <li>
+                        <button onclick="setArrivalTime('18:00 - 24:00')">18:00 - 24:00 <br><span>Night</span></button>
+                    </li>
+                </ul>
+                <div>
+                    <h4>FROM STATIONS</h4>
+                    <p id="fromStationText"></p>
+                </div>
+                <div>
+                    <h4>TO STATIONS</h4>
+                    <p id="toStationText"></p>
+                </div>
+                <div>
+                    <h4>DATE</h4>
+                    <p id="dateText"></p>
+                </div>
+            </div>
+        </section>
+        
+        
+          <section class="sec">
+            <div class="train-schedule">
+                <div class="train-header">
+                    <p id="trainName">Train Name: </p>
+                    <span>Runs On: M T W T F S S</span>
+                </div>
+                <div class="train-details">
+                    <div >
+                        <div class="hi">
+                          <span id="departureTimeSpan">--:--</span>|
+                            <span id="station"></span> |
+                            <span id="sdate"></span>
+                          </div>
+                          
+                        <strong>04:10</strong>
+                        <div class="hi">
+                          <span id="arrivalTimeSpan">--:--</span> |
+                            <span id="station1"></span> |
+                            <span id="sdate1"></span>
+                          </div>
+                    </div>
+                </div>
+                <div class="class-options">
+                    <div>
+                        <strong>Second Sitting (2S)</strong>
+                        <p id="amountText"></p>
+                        <span>Refresh</span>
+                    </div>
+                    <div>
+                        <strong><p id="journeyClassText1"></p></strong>
+                        <span>Refresh</span>
+                    </div>
+                </div>
+                <div class="note">
+                    Please check <a href="#">NTES website</a> or <a href="#">NTES app</a> for actual time before boarding
+                </div>
+                <div class="buttons">
+                  <button class="book-now" onclick="bookNow()">Book Now</button>
+
+                  <!-- Hidden input to store the amount temporarily -->
+                  <input type="hidden" id="amount" name="amount" />
+                    <button class="other-dates">Other Dates</button>
+                </div>
+            </div>
+ </section>
+          <section class="add">
+            <aside class="advertising-sidebar">
+                <div class="ad" id="adContainer">
+                    <img src="path/to/default-image.avif" alt="Advertisement" id="adImage">
+                </div>
+            </aside>
+          </section>
+
+            
+      </div>
+      <div class="fooder">
+        <section id="socials">
+            
+            <!-- <div id="social-icons"> -->
+                <p>Get Connected with us on social networks</p>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook-f blue"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube red" style="    background-color: red;;"></i></a>
+                <a href="https://www.instagram.com/code_architect_x?igsh=ZjhnZ3Y5MGZuOG1h" target="_blank"><i class="fa-brands fa-instagram blue"></i></a>
+                <a href="https://www.linkedin.com/in/yugeshm2003" target="_blank"><i class="fa-brands fa-linkedin-in blue"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-telegram blue"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-pinterest red" style="    background-color: red;;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tumblr grey" style="    background-color: grey;;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter blue"></i></a>
+            <!-- </div> -->
+        </section>
+        
+        <section id="all-links">
+            <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList1','button1')">TOG Trains
+                    <span id="button1">▾</span></li>
+                </ul>
+                <ul id="hiddenList1" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList2','button2')">How To<span id="button2">▾</span></li>
+                </ul>
+                <ul id="hiddenList2" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList3','button3')">TOG eWallet<span id="button3">▾</span></li>
+                </ul>
+                <ul id="hiddenList3" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList4','button4')">For Newly Migrated Agents<span id="button4">▾</span></li>
+                </ul>
+                <ul id="hiddenList4" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList5','button5')">General Information<span id="button5">▾</span></li>
+                </ul>
+                <ul id="hiddenList5" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList6','button6')">TOG Official App<span id="button6">▾</span></li>
+                </ul>
+                <ul id="hiddenList6" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList7','button7')">TOG Loyalty Program<span id="button7">▾</span></li>
+                </ul>
+                <ul id="hiddenList7" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList8','button8')">Mobile Zone<span id="button8">▾</span></li>
+                </ul>
+                <ul id="hiddenList8" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList9','button9')">Important Information<span id="button9">▾</span></li>
+                </ul>
+                <ul id="hiddenList9" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList10','button10')">Advertise with us<span id="button10">▾</span></li>
+                </ul>
+                <ul id="hiddenList10" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+              
+              <div>
+                <ul>
+                  <li onclick="toggleList('hiddenList11','button11')">TOG-iPAY Payment Gateway<span id="button11">▾</span></li>
+                </ul>
+                <ul id="hiddenList11" class="hidden">
+                  <li>Suboption 1 </li>
+                  <li>Suboption 2 </li>
+                  <li>Suboption 3 </li>
+                </ul>
+              </div>
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList12','button12')">Policies<span id="button12">▾</span></li>
+                </ul>
+                <ul id="hiddenList12" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList13','button13')">Agents<span id="button13">▾</span></li>
+                </ul>
+                <ul id="hiddenList13" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList14','button14')">Refund Rules<span id="button14">▾</span></li>
+                </ul>
+                <ul id="hiddenList14" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList15','button15')">TOG Zone<span id="button15">▾</span></li>
+                </ul>
+                <ul id="hiddenList15" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList16','button16')">Ask Disha ChatBot<span id="button16">▾</span></li>
+                </ul>
+                <ul id="hiddenList16" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList17','button17')">Enquiries<span id="button17">▾</span></li>
+                </ul>
+                <ul id="hiddenList17" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList18','button18')">Person With Disability Facilities<span id="button18">▾</span></li>
+                </ul>
+                <ul id="hiddenList18" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+                
+                <div>
+                <ul>
+                    <li onclick="toggleList('hiddenList19','button19')">About us<span id="button19">▾</span></li>
+                </ul>
+                <ul id="hiddenList19" class="hidden">
+                    <li>Suboption 1 </li>
+                    <li>Suboption 2 </li>
+                    <li>Suboption 3 </li>
+                </ul>
+                </div>
+    
+        </section>
+            <section id="sponsors">
+            <div id="images">
+                <img src="https://www.irctc.co.in/nget/assets/images/security.png">
+            </div>
+            <div id="copyright-info">
+                <p>Copyright Â© 2023 - www.TOG.co.in. All Rights Reserved</p>
+                <p>Designed and Hosted by <a href="https://www.instagram.com/code_architect_x?igsh=ZjhnZ3Y5MGZuOG1h">yugesh</p>
+                  <p><a href="www.youtube.com/@Code_architect_x">Compatible Browsers</a></p>
+            </div>
+        </section>
+         
+           
+       </div>
+      <script src="js/js.js"></script>
+
+      <script>
+        function toggleList(listId, buttonId) {
+            var list = document.getElementById(listId);
+            var button = document.getElementById(buttonId);
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "grid";
+                button.textContent = "▴";
+            } else {
+                list.style.display = "none";
+                button.textContent = "▾";
+            }
+        }
+      
+        window.addEventListener("DOMContentLoaded", function () {
+            var hiddenLists = document.getElementsByClassName("hidden");
+            for (var i = 0; i < hiddenLists.length; i++) {
+                hiddenLists[i].style.display = "none";
+            }
+        });
+        window.onload = function() {
+            const classSelect = document.getElementById('classSelect');
+            const journeyClassText = document.getElementById('journeyClassText');
+        
+            // Ensure both elements exist before proceeding
+            if (classSelect && journeyClassText) {
+                // Function to update the paragraph text with the selected option
+                function updateJourneyClass() {
+                    const selectedClass = classSelect.options[classSelect.selectedIndex].text;
+                    journeyClassText.textContent = selectedClass;
+                }
+        
+                // Add event listener for the change event
+                classSelect.addEventListener('change', updateJourneyClass);
+        
+                // Set the initial text when the page first loads
+                updateJourneyClass();
+            } else {
+                console.error("Required elements not found: #classSelect or #journeyClassText");
+            }
+        };
+        
+
+        
+       
+      </script>
+      <script src="js/amount.js"></script>
+      <script src="js/from.js"></script>
+      <script src="js/onload.js"></script>
+      <script src="js/add.js"></script>
+      <script src="js/trackdate.js"></script>
+</body>
+</html>

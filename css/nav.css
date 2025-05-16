@@ -1,0 +1,149 @@
+/* --- Hover Dropdown Options --- */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+header{
+    background-color: rgb(138, 138, 244);
+}
+#main-header{
+    background-color: rgb(138, 138, 244);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+.dropdown-content div {
+    padding: 0.8rem 0.5rem;
+}
+
+.dropdown-content div:hover {
+    background-color: rgb(243, 222, 183);
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-option {
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Header --- */
+#main-header {
+    padding: 1rem 0;
+    height: 11vh;
+    width: 100%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+.libt {
+    display: flex;
+}
+
+#main-header img {
+    height: 95%;
+    width: auto;
+}
+
+#img1 {
+    margin-left: -3rem;
+}
+
+#img2 {
+    margin-right: -3rem;
+}
+
+#linklists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#links1 ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+#links1 ul li {
+    font-size: 0.9rem;
+}
+
+#links1 ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+#links1 ul li a:hover {
+    color: blue;
+}
+
+.btn1 {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn1:hover {
+    background-color: #ccc;
+}
+
+#links2 {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#links2 .dropdown span {
+    cursor: pointer;
+}
+
+/* --- Navigation Menu --- */
+/* Header */
+#main-header {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation */
+/* Navigation Container */
+.logoimg{
+    padding-left: 20px;
+}
+.dropdown a{
+    color: black;
+
+}

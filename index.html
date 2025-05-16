@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TROCKONGO</title>
+    <script src="https://kit.fontawesome.com/0de0529c5f.js" crossorigin="anonymous"></script>
+    
+    <link rel="icon" href="./images/titlepage logo.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+<header id="main-header">
+    <div id="img1">
+        <img src="image/logo.webp" alt="IRCTC Secondary Logo" style="width: 100px;" class="logoimg">
+    </div>
+    <div id="linklists">
+        <div id="links1">
+            <ul>
+                <li onclick="showLogin()"> <a href="#" class="blue-link">LOGIN</a></li>
+                <li><a href="reg.html" class="blue-link">REGISTER</a></li>
+                <li><a href="#">AGENT LOGIN</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">ASK DISHA</a></li>
+                <li><a href="#"><strong>ALERTS</strong></a></li>
+                <li>
+                    <span id="datetime" style="font-weight: bold;"></span>
+                </li>
+                <li class="libt">
+                    <button class="btn1" onclick="decreaseFontSize()">A-</button>
+                    <button class="btn1" onclick="resetFontSize()">A</button>
+                    <button class="btn1" onclick="increaseFontSize()">A+</button>
+                </li>
+                <li><button class="btn1">हिन्दी</button></li>
+            </ul>
+        </div>
+        <div id="links2">
+            <div class="dropdown">
+                <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="dropdown">
+                <span class="blue-bold">TOG EXCLUSIVE</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">TOG eWallet</div>
+                    <div class="dropdown-option">TOG-iPAY</div>
+                    <div class="dropdown-option">e-Gift Vouchers</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="orange-underline">TRAINS</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">Book Ticket</div>
+                    <div class="dropdown-option">Foreign Tourist Booking</div>
+                    <div class="dropdown-option">Connecting Journey Booking</div>
+                    <div class="dropdown-option">TOG Trains</div>
+                    <div class="dropdown-option">Cancel Ticket</div>
+                    <div class="dropdown-option">PNR Enquiry</div>
+                    <div class="dropdown-option">Train Schedule</div>
+                    <div class="dropdown-option">Track Your Train</div>
+                    <div class="dropdown-option">FTR Coach/Train Booking</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Online-Bus-Ticket-Booking-With-DOM-Manipulation-main/Bindex.html" target="_blank">BUSES</a>
+            </div>
+            <div class="dropdown">
+                <a href="Flivan_01-07-23-main/index.html" target="_blank">FLIGHTS</a>
+            </div>
+            <div class="dropdown">
+                <a href="hotel.html" target="_blank">HOTELS</a>
+            </div>
+            <div class="dropdown">
+                <a href="#HOLIDAYS"><span >HOLIDAYS</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">Tourist Trains</div>
+                    <div class="dropdown-option">Tour Packages</div>
+                    <div class="dropdown-option">Stays</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span>LOYALTY</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">TOG SBI Credit Card</div>
+                    <div class="dropdown-option">TOG BOB Credit Card</div>
+                    <div class="dropdown-option">TOG HDFC Credit Card</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span>MEALS</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">Order Food - E-Catering</div>
+                    <div class="dropdown-option">Cooked Food Menu</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span>PROMOTIONS</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">Suboption</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span>MORE</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-option">Suboption</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="" alt="">
+    </div>
+  
+</header>
+
+
+    <img src="image/launcher.gif" alt="hi" class="hihi">
+    <div class="main-div">
+        <div class="first-div">
+            <div class="content1">
+                
+                <div class="ct1">
+                   
+                <label for="#"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="m10.933 13.519-2.226-2.226-1.414 1.414 3.774 3.774 5.702-6.84-1.538-1.282z"></path><path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z"></path></svg>
+                    PNR STATUS</label>
+                </div>
+                <div class="ct2">
+                    <label for="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M15 19h2v2h-2zm-4 0h2v2h-2zm-4 0h2v2H7zm-4 0h2v2H3zM3 7h2v2H3zm0 8h2v2H3zm0-4h2v2H3zm0-8h2v2H3zm12 0h2v2h-2zm-4 0h2v2h-2zM7 3h2v2H7zm4 4h2v2h-2zm0 8h2v2h-2zm-4-4h2v2H7zm8 0h2v2h-2zm-4 0h2v2h-2zm8-6v16h2V3h-2z"></path></svg>
+                        CHARTS/VACANCY</label></div>
+                
+            </div>
+            <div class="t1">
+                <h2>BOOK TICKET</h2>
+            </div>
+            <div class="input">
+                <div>
+                    <div>
+                       
+                        
+                       
+                             
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"></path></svg>
+                            <input type="text" name="From" placeholder=" From">
+                            
+                            <input type="date" name="cal" class="cal" id="date-input">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        
+                            
+                        
+                        <div class="all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); "><circle cx="12" cy="12" r="4"></circle><path d="M13 4.069V2h-2v2.069A8.01 8.01 0 0 0 4.069 11H2v2h2.069A8.008 8.008 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"></path></svg>
+                            <input type="text" name="To" placeholder="To">
+                            <select>
+                                <option value="1">
+                                    ALL CLASSES
+                                </option>
+                                <option value="2">LADIES</option>
+                                <option value="3">
+                                    ANUBHUTI CLASS (EA)
+                                </option>
+                                <option value="4">
+                                    AC FIRST CLASS (1A)
+                                </option>
+                                <option value="5">
+                                    VISTADOME AC(1A)
+                                </option>
+                                <option value="6">
+                                    EXEC.CHAIR CAR (EC)
+                                </option>
+                                <option value="7">
+                                    AC 2 TIER(2A)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="sel">
+                    <select>
+                        <option value="1">
+                            GENERAL
+                        </option>
+                        <option value="2">LADIES</option>
+                        <option value="3">
+                            LOWER BERTH/SR.CITIZEN
+                        </option>
+                        <option value="4">
+                            PERSON WITH DISABILITY
+                        </option>
+                        <option value="5">
+                            DUTY PASS
+                        </option>
+                        <option value="6">
+                            TATKAL
+                        </option>
+                        <option value="7">
+                            PREMIUM TATKAL
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="check">
+                <div class="check1">
+                    <input type="checkbox">
+                <p>Person With disability Concession</p>
+                <input type="checkbox">
+                <p>Flexible With Date</p>
+                </div>
+                <div class="check2">
+                    <input type="checkbox">
+                <p >Train With Available Berth</p>
+                <input type="checkbox">
+                <p>Railway Pass Concession</p>
+                </div>
+
+            </div>
+            <div class="btn">
+                <button>Search</button>
+                <button>Easy Booking on AskDISHA</button>
+            </div>
+            <div class="add">
+                <p>
+                    Customer can use enhanced interface for their TRACKONGO related queries!! <br><span style="color: blue;">https://equery.trackongo.co.in</span>
+                </p>
+
+            </div>
+
+        </div>
+        
+        <div class="second-div">
+            <h1>TRACKONGO RAILWAYS</h1>
+            <DIv class="sul">
+                <ul>
+                    <li ><a href="safty.html" style="color: black;">Safety</a></li>
+                    <li><a href="security.html" style="color: black;">Security</a></li>
+                    <li><a href="punch.html" style="color: black;">Punctuality</a></li>
+                </ul>
+            </DIv>
+        </div>
+    </div>
+    <div class="content2">
+        <h2>
+            Have you not found the right one?<br>
+    Find a service suitable for you here.
+        </h2>
+    </div>
+   <div class="ty">
+    <div class="type" id="icons">
+        <div><a href="Flivan_01-07-23-main/index.html" target="_blank"><i class="fa-solid fa-plane"></i></a><p>FLIGHTS</p></div>
+        <div><a href="hotel.html" target="_blank"><i class="fa-solid fa-hotel"></i></a><p>HOTELS</p></div>
+        <div><a href="https://raildrishti.indianrailways.gov.in/raildrishti/raildrishtiv3/" target="_blank"><i class="fa-solid fa-chart-line"></i></a><p>RAIL DRISHTI</p></div>
+        <div><a href="https://www.ecatering.irctc.co.in/" target="_blank"><i class="fa-solid fa-bell-concierge"></i></a><p>E-CATERING</p></div>
+        <div><a href="Online-Bus-Ticket-Booking-With-DOM-Manipulation-main/Bindex.html" target="_blank"><i class="fa-solid fa-bus"></i></a><p>BUS</p></div>
+       
+    </div>
+    <div class="type" id="icons">
+        <div><a href="https://www.irctctourism.com/tourpacakage_search?searchKey=&tagType=&travelType=&category=" target="_blank"><i class="fa-solid fa-umbrella-beach"></i></a><p>HOLIDAY PACKAGES</p></div>
+        <div><a href="https://www.irctctourism.com/bharatgaurav" target="_blank"><i class="fa-solid fa-train-subway"></i></a><p>TOURIST TRAIN</p></div>
+        <div><a href="https://www.irctctourism.com/gallery/" target="_blank"><i class="fa-solid fa-mountain"></i></a><p>HILL RAILWAYS</p></div>
+        <div><a href="https://www.ftr.irctc.co.in/ftr/" target="_blank"><i class="fa-solid fa-train-tram"></i></a><p>CHARTER TRAIN</p></div>
+        <div><a href="https://www.irctctourism.com/gallery/" target="_blank"><i class="fa-solid fa-mountain-sun"></i></a><p>GALLERY</p></div>
+       </div>
+   </div>
+   <div class="hol" id="HOLIDAYS">
+    <h2>HOLIDAYS</h2>
+    <div class="wrapper">
+
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(https://www.irctc.co.in/nget/assets/images/exterior.jpg)">
+                        <div class="inner">
+                            <p>Maharajas' Express</p>
+                            <!-- <span>Taj Mahal</span> -->
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>Maharajas' Express is a luxury train in India, offering royal journeys with lavish comforts and culture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(https://www.irctc.co.in/nget/assets/images/Thailand.jpg)">
+                        <div class="inner">
+                            <p>International Packages</p>
+                            <!-- <span>Burj Khalifa</span> -->
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>TOG offers top international holiday deals to Thailand, Dubai, Europe, USA, etc., with meals, visas, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(https://www.irctc.co.in/nget/assets/images/Kashmir.jpg)">
+                        <div class="inner">
+                            <p>Domestic Air Packages</p>
+                            <!-- <span>Burj Khalifa</span> -->
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>TOG offers trips to Tirupati, Shirdi, Rajasthan, Ladakh, Himalayas, lakes, islands, and more. Explore India!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(https://www.irctc.co.in/nget/assets/images/Bharat_Gaurav.jpg)">
+                        <div class="inner">
+                            <p>Bharat Gaurav Tourist Train</p>
+                            <!-- <span>Taj Mahal</span> -->
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>
+                                TOG's Bharat Gaurav Train offers AC III-tier trips, showcasing India’s heritage through themed circuits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(https://www.irctc.co.in/nget/assets/images/Manali.jpg)">
+                        <div class="inner">
+                            <p>Rail Tour Packages</p>
+                            <!-- <span>Burj Khalifa</span> -->
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p>TOG offers rail tour packages with confirmed tickets, meals, and sightseeing to destinations like Kashmir, Manali, and Mata Vaishno Devi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   </div>
+   <div class="fooder">
+    <section id="socials">
+        
+        <!-- <div id="social-icons"> -->
+            <p>Get Connected with us on social networks</p>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f blue"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-youtube red" style="    background-color: red;;"></i></a>
+            <a href="https://www.instagram.com/code_architect_x?igsh=ZjhnZ3Y5MGZuOG1h" target="_blank"><i class="fa-brands fa-instagram blue"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in blue"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-telegram blue"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-pinterest red" style="    background-color: red;;"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-tumblr grey" style="    background-color: grey;;"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter blue"></i></a>
+        <!-- </div> -->
+    </section>
+    
+    <section id="all-links">
+        <div>
+            <ul>
+              <li onclick="toggleList('hiddenList1','button1')">TOG Trains
+                <span id="button1">▾</span></li>
+            </ul>
+            <ul id="hiddenList1" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList2','button2')">How To<span id="button2">▾</span></li>
+            </ul>
+            <ul id="hiddenList2" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList3','button3')">TOG eWallet<span id="button3">▾</span></li>
+            </ul>
+            <ul id="hiddenList3" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList4','button4')">For Newly Migrated Agents<span id="button4">▾</span></li>
+            </ul>
+            <ul id="hiddenList4" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList5','button5')">General Information<span id="button5">▾</span></li>
+            </ul>
+            <ul id="hiddenList5" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList6','button6')">TOG Official App<span id="button6">▾</span></li>
+            </ul>
+            <ul id="hiddenList6" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList7','button7')">TOG Loyalty Program<span id="button7">▾</span></li>
+            </ul>
+            <ul id="hiddenList7" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList8','button8')">Mobile Zone<span id="button8">▾</span></li>
+            </ul>
+            <ul id="hiddenList8" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList9','button9')">Important Information<span id="button9">▾</span></li>
+            </ul>
+            <ul id="hiddenList9" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList10','button10')">Advertise with us<span id="button10">▾</span></li>
+            </ul>
+            <ul id="hiddenList10" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+          
+          <div>
+            <ul>
+              <li onclick="toggleList('hiddenList11','button11')">TOG-iPAY Payment Gateway<span id="button11">▾</span></li>
+            </ul>
+            <ul id="hiddenList11" class="hidden">
+              <li>Suboption 1 </li>
+              <li>Suboption 2 </li>
+              <li>Suboption 3 </li>
+            </ul>
+          </div>
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList12','button12')">Policies<span id="button12">▾</span></li>
+            </ul>
+            <ul id="hiddenList12" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList13','button13')">Agents<span id="button13">▾</span></li>
+            </ul>
+            <ul id="hiddenList13" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList14','button14')">Refund Rules<span id="button14">▾</span></li>
+            </ul>
+            <ul id="hiddenList14" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList15','button15')">TOG Zone<span id="button15">▾</span></li>
+            </ul>
+            <ul id="hiddenList15" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList16','button16')">Ask Disha ChatBot<span id="button16">▾</span></li>
+            </ul>
+            <ul id="hiddenList16" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList17','button17')">Enquiries<span id="button17">▾</span></li>
+            </ul>
+            <ul id="hiddenList17" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList18','button18')">Person With Disability Facilities<span id="button18">▾</span></li>
+            </ul>
+            <ul id="hiddenList18" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+            
+            <div>
+            <ul>
+                <li onclick="toggleList('hiddenList19','button19')">About us<span id="button19">▾</span></li>
+            </ul>
+            <ul id="hiddenList19" class="hidden">
+                <li>Suboption 1 </li>
+                <li>Suboption 2 </li>
+                <li>Suboption 3 </li>
+            </ul>
+            </div>
+
+    </section>
+        <section id="sponsors">
+        <div id="images">
+            <img src="https://www.irctc.co.in/nget/assets/images/security.png">
+        </div>
+        <div id="copyright-info">
+            <p>Copyright Â© 2025 - www.TOG.co.in. All Rights Reserved</p>
+            <p>Designed and Hosted by <a href="https://www.instagram.com/code_architect_x?igsh=ZjhnZ3Y5MGZuOG1h">yugesh</p>
+            <p><a href="www.youtube.com/@Code_architect_x">Compatible Browsers</a></p>
+        </div>
+    </section>
+     
+       
+   </div>
+   <div id="parent-container">
+    <section id="y-login" style="display: none;">
+        <div id="y-login-main-container">
+            <div id="y-login-form-container">
+                <form id="login-form">
+                    <div class="close-icon" onclick="hideLogin()">&#10006;</div>
+                    <h1>Login</h1>
+                    <input class="y-login-form-input" type="text" placeholder="Username" required id="login-username">
+                    <P id="p"></P>
+                    <div id="vl"></div>
+                    <input class="y-login-form-input" type="password" placeholder="Password" required id="login-password">
+                    <p id="p1"></p>
+                    <div class="div">
+                        <p><a class="y-login-links" href="forgot.html">FORGOT ACCOUNT DETAILS?</a></p>
+                    </div>
+                    <label class="y-login-form-label">Captcha: <span id="generated-captcha"></span></label>
+                    <input class="y-login-form-input" type="text" name="captcha" placeholder="Enter Captcha" required id="captcha-input">
+                    <p id="p2"></p>
+                    <div class="y-login-form-check">
+                        <input type="checkbox" id="login-otp-checkbox">
+                        <p>Login & Booking With OTP</p>
+                    </div>
+                    <input class="y-login-submit-btn" type="submit" value="SIGN IN">
+                   
+                </form>
+                <div class="y-login-links-btn">
+                    <button><a href="reg.html" style="color: white;">REGISTER</a></button>
+                    <button>AGENT LOGIN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+   </div>
+   <script src="js/javas.js"></script>
+  
+   
+    <script src="js/login.js"></script>
+    <script src="js/l.js"></script>
+    <script src="js/from.js"></script>
+    <script src="js/date.js"></script>
+</body>
+
+
+
+</html>

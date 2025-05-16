@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Account Details</title>
+    <link rel="stylesheet" href="css/forgot.css">
+</head>
+<body>
+    <div class="main-div">
+        <div class="first-div">
+            <div class="addimg">
+                <img src="image/14763004658117789537.jpeg" alt="#">
+            </div>
+            <div class="add2">
+                <h2>Online Train Ticket Booking</h2>
+                <p>Paytm is a TRACKONGO Authorized Train Booking Platform. Secure & Convenient Train Booking</p>
+                <div class="add3">
+                    <p>PAYTM</p>
+                    <p>BOOK NOW</p>
+                </div>
+            </div>
+        </div>
+        <div class="second-div">
+            <form id="forgotForm">
+                <h1>FORGOT ACCOUNT DETAILS</h1>
+                <div class="int1">
+                    <label for="name">UserId/Email Id:</label>
+                    <input type="text" placeholder="Enter your username/email id" id="name" required>
+                </div>
+                <p id="message"></p>
+                <div class="int1">
+                    <label for="generated-captcha">Captcha:</label>
+                    <div id="captcha-display" class="captcha-box"></div>
+                </div>
+                <div class="int1">
+                    <label for="captcha-input">Enter Captcha:</label>
+                    <input class="y-login-form-input" type="text" name="captcha" placeholder="Enter Captcha" required id="captcha-input">
+                </div>
+                <div class="int1">
+                    <label for="new">New Password:</label>
+                    <input type="password" placeholder="Enter your password" id="new" required>
+                </div>
+                <div class="int1">
+                    <label for="confirm">Confirm Password:</label>
+                    <input type="password" placeholder="Confirm your password" id="confirm" required>
+                </div>
+                <input type="button" value="Regenerate Captcha" class="btn" id="regenerate-captcha">
+                <input type="submit" value="Submit" class="btn">
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        // JavaScript to generate and manage CAPTCHA
+        function generateCaptcha() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return captcha;
+        }
+
+        function setCaptcha() {
+            const captchaDisplay = document.getElementById('captcha-display');
+            captchaDisplay.textContent = generateCaptcha();
+        }
+
+        document.getElementById('regenerate-captcha').addEventListener('click', setCaptcha);
+
+        // Initialize the CAPTCHA on page load
+        window.onload = setCaptcha;
+
+        // Handle form submission
+        document.getElementById('forgotForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            const username = document.getElementById('name').value;
+            const enteredCaptcha = document.getElementById('captcha-input').value;
+            const displayedCaptcha = document.getElementById('captcha-display').textContent;
+            const newPassword = document.getElementById('new').value;
+            const confirmPassword = document.getElementById('confirm').value;
+
+            const storedUsername = localStorage.getItem('username');
+            const message = document.getElementById('message');
+
+            // Validate CAPTCHA
+            if (enteredCaptcha !== displayedCaptcha) {
+                message.textContent = 'Captcha does not match!';
+                message.style.color = 'red';
+                return;
+            }
+
+            // Validate username
+            if (username !== storedUsername) {
+                message.textContent = 'Username not found!';
+                message.style.color = 'red';
+                return;
+            }
+
+            // Validate password confirmation
+            if (newPassword !== confirmPassword) {
+                message.textContent = 'Passwords do not match!';
+                message.style.color = 'red';
+                return;
+            }
+
+            // Update password
+            localStorage.setItem('password', newPassword);
+            message.textContent = 'Password updated successfully!';
+            message.style.color = 'green';
+            window.location.href ='index.html'
+        });
+    </script>
+</body>
+</html>

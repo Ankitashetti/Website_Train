@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* ---hover dropdown options */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: .9rem;
+        }
+
+        .dropdown-content div {
+            padding: .8rem 0 .8rem .5rem;
+        }
+
+        .dropdown-content div:hover {
+            background-color: rgb(243, 222, 183);
+            cursor: pointer;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-option {
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* hover dropdown end */
+        /*------- header ------*/
+        #main-header {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            height: 11vh;
+            width: 100vw;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #main-header img {
+            height: 95%;
+            width: auto;
+        }
+
+        #img1 {
+            margin-left: -3rem;
+        }
+
+        #img2 {
+            margin-right: -3rem;
+        }
+
+        #linklists {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #links1 ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 1rem;
+        }
+
+        #links1 ul li {
+            font-size: 0.9rem;
+        }
+
+        #links1 ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            background-color: #ddd;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ccc;
+        }
+
+        #links2 {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        #links2 .dropdown span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header">
+        <div id="img1">
+            <img src="https://www.irctc.co.in/nget/assets/images/secondry-logo.png" alt="IRCTC Secondary Logo">
+        </div>
+        <div id="linklists">
+            <div id="links1">
+                <ul>
+                    <li onclick="showLogin()"> <a href="#" style="color: blue;">LOGIN</a>
+                        <li><a href="reg.html" style="color: blue;">Register</a></li>
+                    <li><a href="https://agent.irctc.co.in/nget/train-search">AGENT LOGIN</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">ASK DISHA</a></li>
+                    <li><a href="https://www.irctc.co.in/nget/enquiry/alerts"><strong>ALERTS</strong></a></li>
+                    <li>
+                        <span id="datetime" style="font-weight: bold;"></span>
+                        <script src="javas.js"></script>
+                    </li>
+                    <li>
+                        <button class="btn" onclick="decreaseFontSize()">A-</button>
+                        <button class="btn" onclick="resetFontSize()">A</button>
+                        <button class="btn" onclick="increaseFontSize()">A+</button>
+                        <script src="./javas.js"></script>
+                    </li>
+                    <li><button class="btn">हिन्दी</button></li>
+                </ul>
+            </div>
+            <div id="links2">
+                <div class="dropdown">
+                    <a href="./index.html"><span><i class="fa-solid fa-house"></i></span></a>
+                </div>
+                <div class="dropdown">
+                    <span class="blue-bold">IRCTC EXCLUSIVE</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">IRCTC eWallet</div>
+                        <div class="dropdown-option">IRCTC-iPAY</div>
+                        <div class="dropdown-option">e-Gift Vouchers</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="orange-underline">TRAINS</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">Book Ticket</div>
+                        <div class="dropdown-option">Foreign Tourist Booking</div>
+                        <div class="dropdown-option">Connecting Journey Booking</div>
+                        <div class="dropdown-option">IRCTC Trains</div>
+                        <div class="dropdown-option">Cancel Ticket</div>
+                        <div class="dropdown-option">PNR Enquiry</div>
+                        <div class="dropdown-option">Train Schedule</div>
+                        <div class="dropdown-option">Track Your Train</div>
+                        <div class="dropdown-option">FTR Coach/Train Booking</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="https://www.bus.irctc.co.in/home" target="_blank"><span>BUSES</span></a>
+                </div>
+                <div class="dropdown">
+                    <a href="https://www.air.irctc.co.in/" target="_blank"><span>FLIGHTS</span></a>
+                </div>
+                <div class="dropdown">
+                    <a href="https://www.hotel.irctctourism.com/hotel" target="_blank"><span>HOTELS</span></a>
+                </div>
+                <div class="dropdown">
+                    <span>HOLIDAYS</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">Tourist Trains</div>
+                        <div class="dropdown-option">Tour Packages</div>
+                        <div class="dropdown-option">Stays</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>LOYALTY</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">IRCTC SBI Credit Card</div>
+                        <div class="dropdown-option">IRCTC BOB Credit Card</div>
+                        <div class="dropdown-option">IRCTC HDFC Credit Card</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>MEALS</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">Order Food - E-Catering</div>
+                        <div class="dropdown-option">Cooked Food Menu</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>PROMOTIONS</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">Suboption</div>
+                        <div class="dropdown-option">Suboption</div>
+                        <div class="dropdown-option">Suboption</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>MORE</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-option">Suboption</div>
+                        <div class="dropdown-option">Suboption</div>
+                        <div class="dropdown-option">Suboption</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="img2">
+            <img src="https://www.irctc.co.in/nget/assets/images/logo.png" alt="IRCTC Logo">
+        </div>
+    </header>
+</body>
+
+</html>

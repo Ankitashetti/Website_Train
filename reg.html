@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your TRACKONGO Account</title>
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+    
+    <header>
+        <img src="image/logo.webp" alt="TRACKONGO Logo" width="50px">
+    </header>
+
+   
+    <div class="main-div">
+       
+        <div class="first-div">
+            <div>
+                <img src="image/13327383341484186270.jpeg" alt="Welcome Image">
+            </div>
+            <form id="registration-form" action="index.html" >
+                <header class="h2">
+                    <h2>Create Your TRACKONGO Account</h2>
+                    <h2><a href="#">Sign In</a></h2>
+                </header>
+                <div class="ol">
+                    <ol>
+                        <li>
+                            <p>Please use a valid E-Mail ID, mobile number, and correct personal details. This may be required for verification purposes.</p>
+                        </li>
+                        <li>
+                            <p>Garbage or junk values in your profile may lead to the deactivation of your TRACKONGO account.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="input">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" name="username" placeholder="User Name" required minlength="3" maxlength="50">
+                    
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" required pattern="[a-zA-Z\s]+" title="Only alphabets and spaces are allowed.">
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required minlength="8" 
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character.">
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required minlength="8">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    
+                    <label for="country-code">Country Code</label>
+                    <select name="country-code" id="country-code" required>
+                        <option value="+91">+91 - India</option>
+                        <option value="+93">+93 - Afghanistan</option>
+                        <option value="+1">+1 - Anguilla</option>
+                        <option value="+61">+61 - Australia</option>
+                        <option value="+599">+599 - BES Islands</option>
+                        <option value="+43">+43 - Austria</option>
+                        <option value="+973">+973 - Bahrain</option>
+                    </select>
+                    
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required pattern="^\d{10}$" title="Enter a valid 10-digit mobile number.">
+                    
+                    <div class="btns1">
+                        <button type="submit" class="btns">Submit</button>
+                        
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+
+       
+        <div class="second-div">
+            <aside>
+                <img src="image/2453403193350464171.jpeg" alt="Promotional Image">
+                <div>
+                    <img src="image/GPT_NWEB_REGISTRATION_RIGHT2.jpeg" alt="Secondary Promotional Image">
+                </div>
+            </aside>
+        </div>
+    </div>
+
+   
+    <footer class="fooder">
+        <img src="image/14219923453585297887.jpeg" alt="Footer Image">
+    </footer>
+
+    <script>
+        document.getElementById("registration-form").addEventListener("submit", function(e) {
+            // Get form fields
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            const email = document.getElementById("email").value;
+            const mobile = document.getElementById("mobile").value;
+            
+            // Password and Confirm Password validation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                e.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // Validate Password (Checking password strength)
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character.");
+                e.preventDefault();
+                return;
+            }
+
+            // Validate Mobile Number (10 digits only)
+            const mobileRegex = /^\d{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                e.preventDefault();
+                return;
+            }
+
+            // Validate Email format
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                e.preventDefault();
+                return;
+            }
+
+            // If everything is valid, redirect to the main page
+            alert("Registration successful! Redirecting to the main page.");
+            window.location.href = "index.html"; // Redirect to the main page (you can change the URL as needed)
+        });
+    </script>
+    <script src="js/r.js"></script>
+</body>
+</html>
